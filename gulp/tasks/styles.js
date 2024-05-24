@@ -13,6 +13,7 @@ const plumberOptions = {
   errorHandler: notify.onError({
     title: 'CSS',
     message: 'Error: <%= error.message %>',
+    notify: false,
   }),
 };
 
@@ -21,14 +22,21 @@ const styles = () => {
     .src(app.paths.src.styles, { sourcemaps: !app.isProd })
     .pipe(plumber(plumberOptions))
     .pipe(sass())
-    .pipe(autoprefixer({
-      cascade: false,
-      grid: true,
-      overrideBrowserslist: ["last 5 versions"]
-    }))
-    .pipe(gulpIf(app.isProd, cleanCSS({
-      level: 2
-    })))
+    .pipe(
+      autoprefixer({
+        cascade: false,
+        grid: true,
+        overrideBrowserslist: ['last 5 versions'],
+      })
+    )
+    .pipe(
+      gulpIf(
+        app.isProd,
+        cleanCSS({
+          level: 2,
+        })
+      )
+    )
     .pipe(app.gulp.dest(app.paths.build.styles))
     .pipe(browserSync.stream());
 };
