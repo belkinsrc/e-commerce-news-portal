@@ -1,0 +1,26 @@
+.header {
+  height: 70px;
+  background-color: var(--light);
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__phone {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--accent);
+    background-image: url('../images/phone.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 25px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}

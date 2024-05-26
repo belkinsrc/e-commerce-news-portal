@@ -10,7 +10,7 @@ export const paths = {
     html: buildFolder,
     styles: `${buildFolder}/css`,
     scripts: `${buildFolder}/js`,
-    images: `${buildFolder}/img`,
+    images: `${buildFolder}/images`,
     fonts: `${buildFolder}/fonts`,
   },
   src: {
