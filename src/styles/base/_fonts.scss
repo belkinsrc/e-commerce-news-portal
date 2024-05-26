@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Futura PT';
-  src: url('../../resources/fonts/FuturaPTBook.woff2') format('woff2'),
-   url('../../resources/fonts/FuturaPTBook.woff') format('woff');
+  src: url('../fonts/FuturaPTBook.woff2') format('woff2'),
+   url('../fonts/FuturaPTBook.woff') format('woff');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: 'Futura PT';
-  src: url('../../resources/fonts/FuturaPTMedium.woff2') format('woff2'),
-   url('../../resources/fonts/FuturaPTMedium.woff') format('woff');
+  src: url('../fonts/FuturaPTMedium.woff2') format('woff2'),
+   url('../fonts/FuturaPTMedium.woff') format('woff');
   font-display: swap;
   font-weight: 500;
   font-style: normal;

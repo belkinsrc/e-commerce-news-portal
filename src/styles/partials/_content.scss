@@ -1,0 +1,127 @@
+.content {
+  grid-area: content;
+}
+
+.articles-grid-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 180px);
+  gap: 40px;
+
+  &__item {
+    
+    &:nth-child(1) {
+      grid-column: 2 span;
+      grid-row: 2 span;
+    }
+
+    &:nth-child(2) {      
+      grid-row: 2 span;
+    }
+
+    &:nth-child(3) {      
+      grid-row: 2 span;
+    }
+
+    &:nth-child(4) {      
+      grid-column: 2 span;
+    }
+
+    &:nth-child(5) {      
+      grid-column: 2 span;
+    }
+
+    &:nth-child(5n+1) {
+      grid-column: 2 span;
+      grid-row: 2 span;
+    }
+
+    &:nth-child(5n+2) {      
+      grid-row: 2 span;
+
+      .article {
+        padding: 30px;
+        background-color: var(--accent);
+        color: var(--light);
+
+        &__category {
+          background-color: #7D8DE4;
+          color: var(--light);
+        }
+    
+        &__link {
+          color: inherit;
+        }
+    
+        &__descr {
+          display: none;
+        }
+    
+        &__date {
+          top: auto;
+          right: auto;
+          left: 30px;
+          bottom: 40px;
+          color: inherit;
+          opacity: 1;
+        }
+      }
+    }
+
+    &:nth-child(5n+3) {      
+      grid-row: 2 span;
+
+      .article {
+        padding: 30px;
+        background-color: var(--accent);
+        color: var(--light);
+
+        &__category {
+          background-color: #7D8DE4;
+          color: var(--light);
+        }
+    
+        &__link {
+          color: inherit;
+        }
+    
+        &__descr {
+          display: none;
+        }
+    
+        &__date {
+          top: auto;
+          right: auto;
+          left: 30px;
+          bottom: 40px;
+          color: inherit;
+          opacity: 1;
+        }
+      }
+    }
+
+    &:nth-child(5n+4) {      
+      grid-column: 2 span;
+
+      .article {
+        padding: 30px;
+
+        &__category {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &:nth-child(5n+5) {      
+      grid-column: 2 span;
+
+      .article {
+        padding: 30px;
+
+        &__category {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

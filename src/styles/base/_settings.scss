@@ -1,17 +1,16 @@
 @import 'normalize';
-@import 'fonts';
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 ul,
 ol {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 a {
@@ -20,8 +19,6 @@ a {
 }
 
 button {
-  margin: 0;
-  padding: 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -38,9 +35,12 @@ html {
 body {
   overflow-anchor: none;
   margin: 0;
-  font-family: "Futura PT", sans-serif;
+  font-family: 'Futura PT', sans-serif;
+  font-size: 18px;
   font-weight: 400;
+  line-height: calc(23 / 18);
   background-color: var(--cover);
+  color: var(--dark);
 }
 
 .main {
@@ -51,6 +51,15 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      'banner banner banner banner'
+      'content content content sidebar';
+    gap: 40px;
+  }
 }
 
 .container {
@@ -58,6 +67,11 @@ body {
   max-width: 1400px;
   padding: 0 15px;
   margin: auto;
+}
+
+.section-title {
+  font-size: 24px;
+  line-height: calc(30 / 24);
 }
 
 .visually-hidden {

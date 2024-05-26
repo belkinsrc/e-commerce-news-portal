@@ -1,14 +1,17 @@
 // Базовые подключения
-@import 'base/variables';
 @import 'base/fonts';
+@import 'base/variables';
 @import 'base/settings';
 
 // Подключение частей
 @import 'partials/header';
-
+@import 'partials/banner';
+@import 'partials/content';
+@import 'partials/sidebar';
 
 // Покдлючение компонентов
 @import 'components/menu';
+@import 'components/article';
 
 
 
