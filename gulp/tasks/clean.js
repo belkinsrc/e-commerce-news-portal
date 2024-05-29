@@ -1,7 +1,5 @@
-import { deleteAsync } from 'del';
-
 const clean = () => {
-  return deleteAsync(app.paths.base.build);
-}
+  return app.plugins.deleteAsync(app.paths.base.build);
+};
 
 export { clean };

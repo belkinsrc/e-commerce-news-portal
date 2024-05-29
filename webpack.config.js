@@ -24,4 +24,5 @@ export default (global) => ({
       },
     ],
   },
+  devtool: !global.isProd ? 'source-map' : false
 });
