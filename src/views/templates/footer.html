@@ -1,9 +1,24 @@
 <footer class="footer">
-  <div class="container">
-    <a class="logo">
-      <img src="images/svg/logo.svg" alt="Логотип Блога" />
+  <div class="container footer__container">
+    <a href="#" class="logo footer__logo">
+      <img src="images/logo.svg" alt="Логотип Блога" />
     </a>
-    @include('../components/menu.html')
+    <nav class="menu footer__menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link menu__link--current">Главная</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">О нас</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Контакты</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Поиск</a>
+        </li>
+      </ul>
+    </nav>
     <small class="footer__copy">
       ООО “Организация” 2020. Все права защищены
     </small>

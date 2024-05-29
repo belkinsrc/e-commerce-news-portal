@@ -1,0 +1,22 @@
+.footer {
+  padding: 40px 0;
+  background-color: var(--footer);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+  }
+
+  &__menu {
+    margin-bottom: 64px;
+  }
+
+  &__copy {
+    font-size: 14px;
+  }
+}
