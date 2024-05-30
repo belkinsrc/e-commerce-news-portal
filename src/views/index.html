@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/main.css">
-  <title>Главная | Баннер</title>
-</head>
-<body>
-  <div class="app">
-    @include('templates/header.html')
-    <main class="main app__container">
-      @include('partials/banner.html')
-      @include('partials/content.html')
-      @include('templates/sidebar.html')
-    </main>
-    @include('templates/footer.html')
-  </div>
-  <script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Главная | Баннер</title>
+  </head>
+  <body>
+    <div class="app">
+      @include('templates/header.html')
+      <main class="main app__container container">
+        @include('partials/banner.html') 
+        @include('partials/content.html')
+        @include('templates/sidebar.html')
+      </main>
+      @include('templates/footer.html')
+    </div>
+    <script src="js/main.js"></script>
+  </body>
 </html>
