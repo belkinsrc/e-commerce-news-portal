@@ -1,0 +1,14 @@
+.post-banner {
+  grid-area: banner;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-image: url('../images/post-banner.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &:not(:last-child) {
+    margin-top: 40px;
+  }
+}

@@ -5,10 +5,12 @@
 
 // Подключение частей
 @import 'partials/header';
-@import 'partials/banner';
-@import 'partials/content';
+@import 'partials/main-banner';
+@import 'partials/main-content';
 @import 'partials/sidebar';
 @import 'partials/footer';
+@import 'partials/post-content';
+@import 'partials/post-banner';
 
 // Покдлючение компонентов
 @import 'components/menu';
