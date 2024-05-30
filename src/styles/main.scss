@@ -11,12 +11,15 @@
 @import 'partials/footer';
 @import 'partials/post-content';
 @import 'partials/post-banner';
+@import 'partials/contacts-content';
 
 // Покдлючение компонентов
 @import 'components/menu';
 @import 'components/article';
 @import 'components/pagination';
 @import 'components/newsletter';
+@import 'components/contacts-info';
+@import 'components/contacts-form';
 
 
 
