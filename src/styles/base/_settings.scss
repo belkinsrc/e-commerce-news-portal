@@ -91,3 +91,11 @@ body {
   white-space: nowrap;
   width: 1px;
 }
+
+.content-button {
+  transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #5d71dd26;
+  }
+}

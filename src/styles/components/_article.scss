@@ -5,6 +5,29 @@
   background-color: var(--light);
   border-radius: 20px;
   padding: 40px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--light) !important;
+    box-shadow: 4px 8px 40px 0px #08186f33;
+    
+  }
+
+  &--accent {
+    &:hover {
+      color: var(--dark) !important;
+
+      .article__category {
+        background-color: #F7F8FD !important;
+        color: var(--accent) !important;
+      }
+
+      .article__date {
+        opacity: 0.4 !important;
+      }
+    }
+  }
 
   &--main {
     height: 280px;
@@ -26,6 +49,7 @@
     padding: 8px 16px;
     background-color: #F7F8FD;
     border-radius: 8px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
     &:not(:last-child) {
       margin-bottom: 30px;
