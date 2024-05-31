@@ -1,0 +1,33 @@
+.not-found {
+  padding: 125px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__image {
+    
+  }
+
+  &__title {
+    font-size: 30px;
+  }
+
+  &__comeback {
+    height: 43px;
+    color: var(--accent);
+    border-radius: 8px;
+    background-image: url("../images/svg/prev.svg");
+    background-position: 16px center;
+    background-repeat: no-repeat;
+    background-color: #5D71DD0D;
+    padding: 10px 34px;
+    padding-right: 18px;
+  }
+}
+.visually-hidden {
+}
