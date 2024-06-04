@@ -1,6 +1,11 @@
 .header {
-  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
   background-color: var(--light);
+  z-index: 100;
 
   &__container {
     height: 100%;
@@ -22,5 +27,5 @@
 .logo {
   display: flex;
   align-items: center;
-  flex-grow: 1;
+  margin-right: auto;
 }

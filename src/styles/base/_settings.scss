@@ -53,12 +53,14 @@ body {
 
 .main {
   flex: 1 1 auto;
+  padding-top: var(--header-height);
 }
 
 .app {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   &__container {
     display: grid;
@@ -73,7 +75,8 @@ body {
 .container {
   box-sizing: content-box;
   max-width: 1400px;
-  padding: 0 15px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin: auto;
 }
 
@@ -98,4 +101,13 @@ body {
   &:hover {
     background-color: #5d71dd26;
   }
+}
+
+.disable-scroll {
+  position: fixed;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100vh;
+  overflow: hidden;
 }

@@ -1,12 +1,44 @@
 .menu {
-  &:not(:last-child) {
-    margin-right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  @media (max-width: 1024px) {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100% - var(--header-height));
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 0;
+    background-color: var(--cover);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s,
+      transform 0.3s ease-in-out;
+    will-change: opacity, transform;
+
+    &--expanded {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
   }
 
   &__list {
     display: flex;
     align-items: center;
     gap: 40px;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      font-size: 21px;
+    }
   }
 
   &__item {
