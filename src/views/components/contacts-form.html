@@ -1,23 +1,43 @@
 <article class="contacts-form">
   <h2 class="contacts-form__title">Напишите нам</h2>
-  <form class="contacts-form__form" action="#">
+  <form class="contacts-form__form" action="#" novalidate data-contacts-form>
     <div class="contacts-form__field">
       <label class="visually-hidden" for="name">Ваше имя</label>
       <input
-        class="contacts-form__input"
         type="text"
         id="name"
+        class="contacts-form__input"
         placeholder="Ваше имя"
+        minlength="2"
+        pattern="^[a-zA-Zа-яА-ЯЁё \-]+$"
+        data-error-message="Разрешены символы латиницы,
+        кириллицы, знаки дефиса и пробелы."
+        aria-describedby="name-error"
+        required
       />
+      <span
+        class="contacts-form__error"
+        id="name-error"
+        aria-live="polite"
+      >
+      </span>
     </div>
     <div class="contacts-form__field">
       <label class="visually-hidden" for="email">Ваш email</label>
       <input
-        class="contacts-form__input"
         type="email"
         id="email"
+        class="contacts-form__input"
         placeholder="Ваш Email"
+        aria-describedby="email-error"
+        required
       />
+      <span
+        class="contacts-form__error"
+        id="email-error"
+        aria-live="polite"
+      >
+      </span>
     </div>
     <div class="contacts-form__field">
       <label class="visually-hidden" for="message">Ваше сообщение</label>
@@ -27,7 +47,10 @@
         placeholder="Сообщение..."
       ></textarea>
     </div>
-    <button class="contacts-form__button" type="submit">
+    <button 
+      type="submit" 
+      class="contacts-form__button" 
+      aria-describedby="empty-error">
       Отправить
       <svg
         width="20"
@@ -54,5 +77,11 @@
         </defs>
       </svg>
     </button>
+    <span
+      class="contacts-form__error"
+      id="empty-error"
+      aria-live="polite"
+    >
+    </span>
   </form>
 </article>
