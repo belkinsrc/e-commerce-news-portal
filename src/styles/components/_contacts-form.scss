@@ -79,5 +79,9 @@
     color: #FF8630;
     font-size: 14px;
     padding-left: 30px;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
