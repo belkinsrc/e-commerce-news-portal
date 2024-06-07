@@ -1,12 +1,26 @@
 <div class="newsletter">
   <h3 class="newsletter__title section-title">Подписка на рассылку</h3>
-  <form action="#" class="newsletter__form">
-    <input
-      type="email"
-      class="newsletter__input"
-      placeholder="Email@gmail.com"
-    />
-    <button type="submit" class="newsletter__button">
+  <form action="#" class="newsletter__form" novalidate data-newsletter-form>
+    <div class="newsletter__form-field">
+      <input
+        type="email"
+        id="newsletter-email"
+        class="newsletter__input"
+        placeholder="Email@gmail.com"
+        aria-describedby="newsletter-email-error"
+        required
+      />
+      <span
+        id="newsletter-email-error"
+        class="newsletter__error"
+        aria-live="polite"
+      ></span>
+    </div>
+    <button
+      type="submit"
+      class="newsletter__button"
+      aria-describedby="newsletter-empty-error"
+    >
       Подписаться
       <svg
         width="20"
@@ -33,5 +47,10 @@
         </defs>
       </svg>
     </button>
+    <span
+      id="newsletter-empty-error"
+      class="newsletter__error"
+      aria-live="polite"
+    ></span>
   </form>
 </div>
