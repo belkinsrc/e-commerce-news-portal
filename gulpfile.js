@@ -8,6 +8,7 @@ import { images } from './gulp/tasks/images.js';
 import { webpImages } from './gulp/tasks/webp.js';
 import { svg } from './gulp/tasks/svg.js';
 import { fonts } from './gulp/tasks/fonts.js';
+import { data } from './gulp/tasks/data.js';
 import { zipFiles } from './gulp/tasks/zip.js';
 
 import { paths } from './gulp/config/paths.js';
@@ -32,14 +33,18 @@ const watcher = () => {
   gulp.watch(`${app.paths.base.src}/**/*.html`, html);
   gulp.watch(`${app.paths.base.src}/**/*.scss`, styles);
   gulp.watch(`${app.paths.base.src}/**/*.js`, scripts);
-  gulp.watch(`${app.paths.base.src}/**/*.{jpg,jpeg,png}`, gulp.parallel(images, webpImages));
+  gulp.watch(
+    `${app.paths.base.src}/**/*.{jpg,jpeg,png}`,
+    gulp.parallel(images, webpImages)
+  );
   gulp.watch(`${app.paths.base.src}/**/*.svg`, svg);
   gulp.watch(`${app.paths.base.src}/**/*.{woff,woff2,ttf,otf,eot}`, fonts);
+  gulp.watch(`${app.paths.base.src}/data/*.*`, data);
 };
 
 const dev = gulp.series(
   clean,
-  gulp.parallel(html, scripts, styles, images, webpImages, svg, fonts),
+  gulp.parallel(html, scripts, styles, images, webpImages, svg, fonts, data),
   watcher
 );
 const zip = zipFiles;
