@@ -19,6 +19,12 @@
   gap: 40px;
 
   &__item {
+    &:not(:nth-child(1)) {
+      .article__descr {
+        display: none;
+      }
+    }
+
     &:nth-child(1) {
       grid-column: 2 span;
       grid-row: 2 span;

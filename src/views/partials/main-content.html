@@ -1,89 +1,94 @@
 <section class="main-content">
   <h2 class="visually-hidden">Статьи блога</h2>
-  <div class="articles">
-    <article class="article article--main">
-      <a href="#category" class="article__category content-button">Категория 1</a>
+  <div class="articles" data-articles-parent>
+    
+  </div>
+  @include('../components/pagination.html')
+</section>
+
+
+
+
+<!-- <article class="article article--main">
+  <a href="#category" class="article__category content-button">Категория 1</a>
+  <h3 class="article__title section-title">
+    <a href="#title" class="article__link">
+      Управление ИТ-активами – скучная рутина или творческая задача?
+    </a>
+  </h3>
+  <p class="article__descr">
+    Размышляя об управлении ИТ-активами, я вспомнил один учебный пример.
+    Менеджер по ИТ-мощностям в крупной компании периодически готовил
+    толстенный отчёт руководству. В очередной раз он не принёс отчёт, решив
+    проверить, нужен ли он вообще.
+  </p>
+  <time datetime="2020-12-13" class="article__date">13 дек 2020</time>
+</article>
+<ul class="articles-grid-list">
+  @for(let i = 0; i < 2; i++) {
+  <li class="articles-grid-list__item">
+    <article class="article">
+      <a href="#" class="article__category content-button">Категория 1</a>
       <h3 class="article__title section-title">
-        <a href="#title" class="article__link">
+        <a href="#" class="article__link">
           Управление ИТ-активами – скучная рутина или творческая задача?
         </a>
       </h3>
       <p class="article__descr">
         Размышляя об управлении ИТ-активами, я вспомнил один учебный пример.
         Менеджер по ИТ-мощностям в крупной компании периодически готовил
-        толстенный отчёт руководству. В очередной раз он не принёс отчёт, решив
-        проверить, нужен ли он вообще.
+        толстенный отчёт руководству. В очередной раз он не принёс отчёт,
+        решив проверить, нужен ли он вообще.
       </p>
       <time datetime="2020-12-13" class="article__date">13 дек 2020</time>
     </article>
-    <ul class="articles-grid-list">
-      @for(let i = 0; i < 2; i++) {
-      <li class="articles-grid-list__item">
-        <article class="article">
-          <a href="#" class="article__category content-button">Категория 1</a>
-          <h3 class="article__title section-title">
-            <a href="#" class="article__link">
-              Управление ИТ-активами – скучная рутина или творческая задача?
-            </a>
-          </h3>
-          <p class="article__descr">
-            Размышляя об управлении ИТ-активами, я вспомнил один учебный пример.
-            Менеджер по ИТ-мощностям в крупной компании периодически готовил
-            толстенный отчёт руководству. В очередной раз он не принёс отчёт,
-            решив проверить, нужен ли он вообще.
-          </p>
-          <time datetime="2020-12-13" class="article__date">13 дек 2020</time>
-        </article>
-      </li>
-      <li class="articles-grid-list__item">
-        <article class="article article--accent">
-          <a href="#" class="article__category content-button">Категория 1</a>
-          <h3 class="article__title section-title">
-            <a href="#" class="article__link">
-              ITAM&SAMDay – самая настоящая удача!
-            </a>
-          </h3>
-          <time datetime="2020-12-13" class="article__date">13 дек 2020</time>
-        </article>
-      </li>
-      <li class="articles-grid-list__item">
-        <article
-          class="article article--with-image"
-          style="background: url('./images/article-bg.jpg')"
-        >
-          <a href="#" class="article__category content-button--light">Категория 1</a>
-          <h3 class="article__title section-title">
-            <a href="#" class="article__link">
-              Управление ИТ-активами – скучная рутина или творческая задача?
-            </a>
-          </h3>
-          <time datetime="2020-12-13" class="article__date">13 дек 2020</time>
-        </article>
-      </li>
-      <li class="articles-grid-list__item">
-        <article class="article">
-          <a href="#" class="article__category content-button">Категория 1</a>
-          <h3 class="article__title section-title">
-            <a href="#" class="article__link">
-              Управление ИТ-активами – скучная рутина или творческая задача?
-            </a>
-          </h3>
-          <time datetime="2020-12-13" class="article__date">13 дек 2020</time>
-        </article>
-      </li>
-      <li class="articles-grid-list__item">
-        <article class="article">
-          <a href="#" class="content-button article__category">Категория 1</a>
-          <h3 class="article__title section-title">
-            <a href="#" class="article__link">
-              ITAM&SAMDay – самая настоящая удача!
-            </a>
-          </h3>
-          <time datetime="2020-12-13" class="article__date">13 дек 2020</time>
-        </article>
-      </li>
-      }
-    </ul>
-  </div>
-  @include('../components/pagination.html')
-</section>
+  </li>
+  <li class="articles-grid-list__item">
+    <article class="article article--accent">
+      <a href="#" class="article__category content-button">Категория 1</a>
+      <h3 class="article__title section-title">
+        <a href="#" class="article__link">
+          ITAM&SAMDay – самая настоящая удача!
+        </a>
+      </h3>
+      <time datetime="2020-12-13" class="article__date">13 дек 2020</time>
+    </article>
+  </li>
+  <li class="articles-grid-list__item">
+    <article
+      class="article article--with-image"
+      style="background: url('./images/article-bg.jpg')"
+    >
+      <a href="#" class="article__category content-button--light">Категория 1</a>
+      <h3 class="article__title section-title">
+        <a href="#" class="article__link">
+          Управление ИТ-активами – скучная рутина или творческая задача?
+        </a>
+      </h3>
+      <time datetime="2020-12-13" class="article__date">13 дек 2020</time>
+    </article>
+  </li>
+  <li class="articles-grid-list__item">
+    <article class="article">
+      <a href="#" class="article__category content-button">Категория 1</a>
+      <h3 class="article__title section-title">
+        <a href="#" class="article__link">
+          Управление ИТ-активами – скучная рутина или творческая задача?
+        </a>
+      </h3>
+      <time datetime="2020-12-13" class="article__date">13 дек 2020</time>
+    </article>
+  </li>
+  <li class="articles-grid-list__item">
+    <article class="article">
+      <a href="#" class="content-button article__category">Категория 1</a>
+      <h3 class="article__title section-title">
+        <a href="#" class="article__link">
+          ITAM&SAMDay – самая настоящая удача!
+        </a>
+      </h3>
+      <time datetime="2020-12-13" class="article__date">13 дек 2020</time>
+    </article>
+  </li>
+  }
+</ul> -->
