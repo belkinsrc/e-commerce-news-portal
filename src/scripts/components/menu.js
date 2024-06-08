@@ -1,4 +1,4 @@
-export class MenuModel {
+export class Menu {
   constructor() {
     this.header = document.querySelector('[data-header]');
     this.menu = this.header?.querySelector('[data-menu]');

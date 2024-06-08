@@ -1,4 +1,4 @@
-export class NewsletterFormModel {
+export class NewsletterForm {
   constructor() {
     this.form = document.querySelector('[data-newsletter-form]');
     this.inputList = Array.from(this.form?.querySelectorAll('.newsletter__input'));

@@ -1,4 +1,4 @@
-export class ContactsFormModel {
+export class ContactsForm {
   constructor() {
     this.form = document.querySelector('[data-contacts-form]');
     this.inputList = Array.from(
