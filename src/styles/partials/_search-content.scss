@@ -1,0 +1,36 @@
+.search.container {
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  padding-top: calc(var(--header-height) + 80px);
+}
+
+
+#search {
+  .header.header--search--open {
+    position: relative;
+
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--light);
+      z-index: 30;
+    }
+
+    .logo {
+      z-index: 50;
+    }
+
+    .close-link {
+      display: block;
+      z-index: 50;
+    }
+  }
+}
