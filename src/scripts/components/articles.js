@@ -1,17 +1,15 @@
+import { ArticlesUtils } from '../utils/articles.js';
 export class Articles {
   constructor() {
     this.parentElement = document.querySelector('[data-articles-parent]');
     this.pageSize = 6;
-    this.#fetchArticles(1);
+    this.#init(1);
   }
 
-  #fetchArticles(page) {
-    fetch('../../data/articles.json')
-      .then((response) => response.json())
-      .then((data) => {
-        this.#displayArticles(data, page);
-      })
-      .catch((error) => console.error('Error fetching news:', error));
+  #init(page) {
+    ArticlesUtils.fetchArticles().then((data) => {
+      this.#displayArticles(data, page);
+    });
   }
 
   #displayArticles(data, page) {
@@ -45,7 +43,6 @@ export class Articles {
     const styleBg = backgroundImage
       ? `style="background:url(${backgroundImage})"`
       : '';
-    console.log(styleBg);
 
     return `<article class="article ${extraClass ? extraClass : ''}" ${styleBg}>
         <a href="#category" class="article__category content-button">${category}</a>
