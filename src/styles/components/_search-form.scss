@@ -1,5 +1,6 @@
 .search-form {
-  width: 1040px; 
+  width: 1040px;
+  padding-bottom: 40px;
 
   &__control {
     display: flex;
@@ -45,12 +46,16 @@
     padding: 20px 40px;
     background-color: var(--light);
     border-radius: 20px;
+    box-shadow: 4px 4px 40px #08186F33;
+    text-align: center;
+    opacity: 0;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-align: start;
   }
 
   &__item {
