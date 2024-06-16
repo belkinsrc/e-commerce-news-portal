@@ -10,10 +10,11 @@
     <div class="app">
       @include('templates/header.html')
       <main class="main app__container search container">
-        <form class="search-form">
+        <form class="search-form" data-search-form>
           <div class="search-form__control">
             <input
               type="text"
+              id="search"
               class="search-form__input"
               placeholder="Введите что-нибуть..."
             />
@@ -41,7 +42,7 @@
             </button>
           </div>
           <div class="search-form__content">
-            <ul class="search-form__list">
+            <!-- <ul class="search-form__list">
               <li class="search-form__item">
                 <a href="#" class="search-form__link">Ссылка 1</a>
                 <time class="search-form__date" datetime="2020-12-13">13 дек 2020</time>
@@ -54,7 +55,7 @@
                 <a href="#" class="search-form__link">Ссылка 3</a>
                 <time class="search-form__date" datetime="2020-12-13">13 дек 2020</time>
               </li>
-            </ul>
+            </ul> -->
           </div>
         </form>
       </main>
